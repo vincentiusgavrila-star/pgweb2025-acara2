@@ -1,107 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acara 1 | HTML CSS</title>
-
-    <link rel="stylesheet" href="app.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- judul halaman browser -->
+    <title>Bootstrap demo</title>
+    <!-- import style dan komponen dari CDN secara siap pakai, gak perlu download untuk css bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- Judul -->
-    <h1>Kota Yogyakarta</h1>
-    <hr>
-    <!-- Sub Judul -->
-    <h2>Kota Yogyakarta</h2>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!-- navigasi bar memenuhi layar -->
+        <div class="container-fluid"> 
+            <a class="navbar-brand" href="#">Yogyakarta</a>
+            <!-- memunculkan tombol toggler saat dibuka pada mobile (strip 3) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- menu navigasi yang dapat collapse (disembunyikan di tombol toggler tadi) -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#deskripsi">Deskripsi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#populasi">Jumlah Penduduk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#regency">Kecamatan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#website">Website</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fotovideo">Gambar</a>
+                    </li>
+                </ul>
 
-    <!---->
-    <h3>Deskripsi</h3>
-    <p id="p1">Nama Yogyakarta berasal dari dua kata, yaitu Ayogya atau Ayodhya yang berarti "kedamaian" (atau tanpa
-        perang,
-        a "tidak", yogya merujuk pada yodya atau yudha, yang berarti "perang"), dan Karta yang berarti "baik".
-        Ayodhya merupakan kota yang bersejarah di India di mana wiracarita Ramayana terjadi. Tapak Keraton
-        Yogyakarta sendiri menurut babad (misalnya Babad Giyanti) dan leluri (riwayat oral) telah berupa sebuah
-        dalem yang bernama Dalem Garjiwati; lalu dinamakan ulang oleh Susuhunan Pakubuwana II menjadi Dalem Ayogya
-    </p>
-    <p class="p2">Dalam sistem ejaan pada masa itu, nama tersebut dieja menggunakan alfabet Latin sebagai "Jogjakarta".
-        Seiring
-        perubahan dalam ejaan bahasa Indonesia, konsonan /j/ mulai ditulis dengan ⟨y⟩, dan konsonan /dʒ/ ditulis
-        dengan ⟨j⟩. Namun, nama pribadi dan geografis diizinkan untuk mempertahankan ejaan aslinya sesuai dengan
-        ejaan kontemporer bahasa Indonesia. Karena itu, kota ini dapat ditulis sebagai "Yogyakarta", yang setia pada
-        pelafalan aslinya dan penulisan dalam aksara Jawa, atau "Jogjakarta", yang setia pada ejaan Belanda lama dan
-        mencerminkan pelafalan populer saat ini, namun berbeda dari etimologi aslinya dari Ayodhya. Saat ini, baik
-        "Yogyakarta" maupun "Jogjakarta" dapat ditemukan dalam berbagai dokumen</p>
+            </div>
+        </div>
+    </nav>
 
-    <hr>
-    <!-- Tabel Jumlah Penduduk -->
-    <table>
-        <tr>
-            <th>No |</th>
-            <th>Jenis Kelamin |</th>
-            <th>Jumlah</th>
-        </tr>
-        <tr>
-        <tr>
-            <td>1</td>
-            <td>Pria</td>
-            <td>202.478</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Wanita</td>
-            <td>213.127</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Total</td>
-            <td>415.605</td>
-        </tr>
-        </tr>
-    </table>
+    <main class="container mt-3">
+        <!-- mt=margin top -->
+        <!-- TITLE -->
+        <div class="alert alert-primary" role="alert">
+            <h2>Yogyakarta</h2>
+            <h5>D.I. Yogyakarta</h5>
+        </div>
 
-    <hr>
+        <!-- DESCRIPTION -->
+        <div class="card" id="deskripsi">
+            <div class="card-header">
+                Deskripsi
+            </div>
+            <div class="card-body">
+                <p class="card-text">Kota Yogyakarta (bahasa Jawa: ꦔꦪꦺꦴꦒꦾꦏꦂꦠ, translit. Ngayogyakarta, pengucapan bahasa
+                    Jawa: [kuʈɔ ŋajogjɔˈkart̪ɔ], atau dikenal oleh masyarakat setempat dengan sebutan nama Yogya atau
+                    Jogja) adalah ibu kota sekaligus pusat pemerintahan dan perekonomian Daerah Istimewa Yogyakarta,
+                    Indonesia. Kota ini adalah kota yang mempertahankan konsep tradisional dan budaya Jawa.</p>
+                <p class="card-text">Salah satu kemantren di Yogyakarta, yaitu Kotagede (Kuthagedhe dalam penulisan
+                    bahasa Jawa) pernah menjadi pusat Kesultanan Mataram antara kurun tahun 1575–1640. Kini, Yogyakarta
+                    menjadi tempat tinggal dua penerus Mataram, yakni Sultan Hamengkubuwana dan Adipati Paku Alam, yang
+                    berada di Keraton Ngayogyakarta dan Pura Pakualaman.</p>
+            </div>
+        </div>
 
-    <!-- Tabel Kecamatan -->
-    <h4>Kecamatan</h4>
-    <ol>
-        <li>Danurejan</li>
-        <li> Gedongtengen</li>
-        <li> Gondokusuman</li>
-        <li> Gondomanan</li>
-        <li> Jetis</li>
-        <li> Kotagede</li>
-        <li> Kraton</li>
-        <li> Mantrijeron</li>
-        <li> Mergangsan</li>
-        <li> Ngampilan</li>
-        <li> Pakualaman</li>
-        <li> Tegalrejo</li>
-        <li> Umbulharjo</li>
-        <li> Wirobrajan</li>
-    </ol>
-    <hr>
-    <!-- LINK WEBSITE -->
-    <a href="https://cctv.jogjakota.go.id/" target="_blank" rel="noopener noreferrer"
-        title="Klik untuk membuka website">Website CCTV Jogja</a>
+        <!-- POPULATION -->
+        <div class="card mt-3" id="populasi">
+            <div class="card-header">
+                Penduduk
+            </div>
+            <div class="card-body">
+                <table class="table table-striped table-bordered">
+                    <tr>
+                        <th>No</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Jumlah</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Pria</td>
+                        <td>202.478 jiwa</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Wanita</td>
+                        <td>213.127 jiwa</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Total</td>
+                        <td>415.021 jiwa</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
-    <hr>
-    <!-- IMAGE -->
-    <div class="image-center">
-        <img src="kraton.jpg" alt="Kraton Ngayogyakarta" height="200px" title="Kraton Ngayogyakarta">
-        <img src="tugu.jpg" alt="Tugu Golong Gilig" height="200px" title="Tugu Golong Gilig">
-        <img src="malioboro.jpg" alt="Malioboro" height="200px" title="Malioboro">
-    </div>
+        <!-- REGENCY -->
+        <div class="card mt-3" id="regency">
+            <div class="card-header">
+                Kecamatan
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li>Danurejan</li>
+                    <li> Gedongtengen</li>
+                    <li> Gondokusuman</li>
+                    <li> Gondomanan</li>
+                    <li> Jetis</li>
+                    <li> Kotagede</li>
+                    <li> Kraton</li>
+                    <li> Mantrijeron</li>
+                    <li> Mergangsan</li>
+                    <li> Ngampilan</li>
+                    <li> Pakualaman</li>
+                    <li> Tegalrejo</li>
+                    <li> Umbulharjo</li>
+                    <li> Wirobrajan</li>
+                </ol>
+            </div>
+        </div>
 
-    <hr>
+        <!-- LINK WEBSITE -->
+        <div class="card mt-3" id="website">
+            <div class="card-header">
+                Website
+            </div>
+            <div class="card-body">
+                <!-- membuka link di tab baru (blank) kalo engga nanti menumpuk web ini -->
+                 <a href="https://cctv.jogjakota.go.id/" target="_blank" rel="noopener noreferrer" title="Klik untuk membuka website">Website CCTV Jogja</a>
+            </div>
+        </div>
 
-    <!-- IFRAME -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/z_lvZLnsnhI?si=N2i3jkhYt3gzD0EC"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- PHOTO AND VIDEO -->
+        <div class="card mt-3" id="fotovideo">
+            <div class="card-header">
+                Gambar
+            </div>
+            <div class="card-body">
+                 <img src="kraton.jpg" alt="Kraton Ngayogyakarta" alt="" height="200px" title="Kraton Ngayogyakarta" style="display:block; margin-bottom:10px;"> 
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/z_lvZLnsnhI?si=N2i3jkhYt3gzD0EC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        
     </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
